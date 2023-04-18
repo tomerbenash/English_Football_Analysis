@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # FOR THE LAST 3 YEARS, TOP 4 HOME TEAMS, AND HOW MANY EACH SEASON?
 
-df = pd.read_csv('matches.csv', low_memory=False)
+df = pd.read_csv('data/matches.csv', low_memory=False)
 
 df = df[(df['division'] == 'Premier League') & (df['season'].isin([2019, 2020, 2021]))]
 

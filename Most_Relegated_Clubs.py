@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 pd.set_option('display.max_rows', None)
 
-df = pd.read_csv('Standings.csv',low_memory=False)
+df = pd.read_csv('data/Standings.csv', low_memory=False)
 
 filtered_df1 = df.loc[(df['division'] == 'Premier League' ) & (df['season'] >= 1995 ) & (df['season'] <= 2021) &
                      ((df['position'] == 18) | (df['position'] == 19) | (df['position'] == 20)),

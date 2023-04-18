@@ -1,7 +1,7 @@
 import pandas as pd
 import sqlite3
 
-df = pd.read_csv('matches.csv')
+df = pd.read_csv('data/matches.csv')
 conn = sqlite3.connect('football.db')
 df.to_sql('matches', conn, if_exists='replace', index=False)
 cursor = conn.cursor()
@@ -28,7 +28,7 @@ results = cursor.fetchall()
 for row in results:
     print(row)
 
-df = pd.read_csv('Seasons.csv')
+df = pd.read_csv('data/Seasons.csv')
 conn = sqlite3.connect('football.db')
 df.to_sql('Seasons', conn, if_exists='replace', index=False)
 
@@ -54,7 +54,7 @@ results = cursor.fetchall()
 for row in results:
     print(row)
 
-df = pd.read_csv('Standings.csv')
+df = pd.read_csv('data/Standings.csv')
 conn = sqlite3.connect('football.db')
 df.to_sql('Standings', conn, if_exists='replace', index=False)
 

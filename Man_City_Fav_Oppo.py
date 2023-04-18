@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 pd.set_option('display.max_rows', None)
 
-df = pd.read_csv('matches.csv',low_memory=False)
+df = pd.read_csv('data/matches.csv', low_memory=False)
 
 mc_matches = df.loc[(df['home_team_name'] == 'Manchester City' ) | (df['away_team_name'] == 'Manchester City'), ['home_team_name','away_team_name', 'home_team_score', 'away_team_score']]
 

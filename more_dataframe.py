@@ -4,7 +4,7 @@ import seaborn as sns
 
 pd.set_option('display.max_rows', None)
 
-df = pd.read_csv('Standings.csv',low_memory=False)
+df = pd.read_csv('data/Standings.csv', low_memory=False)
 
 #G/F G/A G/D for every club
 team_goals = df.groupby(["team_name"]).agg({"goals_for": "sum", "goals_against": "sum"})
@@ -19,7 +19,7 @@ plt.xticks(rotation=20)
 #print(top_10_teams)
 #plt.show()
 
-df = pd.read_csv('Standings.csv',low_memory=False)
+df = pd.read_csv('data/Standings.csv', low_memory=False)
 filtered_df = df.loc[(df['division'] == 'Premier League' ) & (df['season'] == 2020 ),['team_name','wins','played']]
 
 

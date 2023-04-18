@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 pd.set_option('display.max_rows', None)
 
-df = pd.read_csv('Standings.csv',low_memory=False)
+df = pd.read_csv('data/Standings.csv', low_memory=False)
 
 filtered_df = df.loc[(df['division'] == 'Premier League' ) & (df['position'] == 1 ), ['season','team_name' ,'position', 'goal_difference']]
 

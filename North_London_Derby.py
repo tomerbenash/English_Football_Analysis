@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('matches.csv',low_memory=False)
+df = pd.read_csv('data/matches.csv', low_memory=False)
 
 df = df[df['match_name'].isin(['Arsenal vs Tottenham Hotspur', 'Tottenham Hotspur vs Arsenal'])]
 

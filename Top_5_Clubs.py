@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('Standings.csv')
+df = pd.read_csv('data/Standings.csv')
 
 df = df[df['division'] == 'Premier League']
 
